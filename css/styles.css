@@ -1,0 +1,178 @@
+/** { border: 1px solid red; } 
+*/
+
+body {
+	position: relative;
+	margin-top: 50px;
+}
+
+.jumbotron {
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+
+.navbar {
+	background-color: black;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-left: 10px;
+}
+
+.navbar-default .navbar-nav>li>a  {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-right: 10px;
+	-webkit-transition: color 1600ms; 
+
+}
+
+.navbar-default .navbar-nav>a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.container-fluid {
+	padding: 0 0 0 0;
+}
+
+.container {
+	padding-top: 0px;
+}
+
+.carousel-caption1  {
+	position: absolute;
+  	top: 50px;
+  	right: 50px;
+  	color: #000099;
+  	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  	text-align: right;
+
+}
+
+.carousel-caption1 p {
+	color: #000099;
+}
+
+.carousel-caption2 p {
+	color: #000099;
+}
+
+
+.carousel-caption2  {
+	position: absolute;
+  	top: 100px;
+  	right: 100px;
+  	color: #000099;
+  	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+
+}
+
+.anchor h1 {
+	padding-top: 30px; 
+}
+
+#contact {
+	background-image: url("../img/montagne.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	color: #000099;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+#contact a {
+	color: #000099;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.gmaps {
+  margin: 0 auto;
+  width: 700px; /* largeur obligatoire pour être centré */
+  padding-top: 30px; 
+}
+
+
+.video {
+  margin: 0 auto;
+  width: 560px; /* largeur obligatoire pour être centré */
+  padding-top: 30px; 
+}
+
+}
+
+.foot {
+	padding-top: 100px;
+}
+
+.twitt {
+	padding-top: 10px;
+}
+
+.fb-share-button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.learn-more {	
+	text-align: left;
+	float: left;
+	padding-left: 15px;
+}
+
+.modal-button {
+	float: right;
+	padding: 15px;
+}
+
+.modal-body {
+	height: 500px;
+	
+}
+
+#modalframe {
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.the-array {
+	padding-bottom: 30px;
+
+}
+.the-array table {
+	width: 100%;
+}
+
+.image img {
+    border:2px solid pink;
+    /*width:200px;
+    height:200px;*/
+    margin:5px;
+    /* display:inline-block;
+    position:relative;*/
+}
+.info {
+    display:inline-block;
+    color:#fff;
+    font-family:Futura;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.5em;
+    line-height:1.6;
+    position:absolute;
+    top:15%;
+    left:10%;
+}
+.proj-title {
+    font-weight:100;
+}
+
+

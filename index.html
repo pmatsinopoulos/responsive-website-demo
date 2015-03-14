@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <title>Phil Jedar PortFolio</title>
+
+      <!-- CSS -- >
+                  
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">      
+
+      <link href="css/styles.css" rel="stylesheet">
+
+      <!-- JAVASCRIPT -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+      <!--jQuery Media Script-->
+      <script src="js/jquery.media.js" type="text/javascript"></script>
+      
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <script> 
+         $(function () { 
+           $('#item1').tooltip(); 
+           $('#item2').tooltip();
+           $('#item3').tooltip();
+           $('#item4').tooltip();
+              }); 
+      </script>
+
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgwNC_ggTNI2TnQLYzRGbXlZwGtwBYm08"></script>
+
+      <script src="js/scripts.js"></script>
+
+      <!-- Custom styles for this template go here -->
+      <!-- Just for debugging purposes. Don't actually copy this line! -->
+      <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body data-spy="scroll" data-target=".navbar">
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <!-- navbar starts here -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Philippe Jedar</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                  <li> <a href="#about">About</a> </li>
+                  <li> <a href="#faq">Faq</a> </li>
+                  <li> <a href="#contact">Contact</a> </li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container-fluid -->
+      </nav>
+      <!-- navbar ends here -->
+      
+      <!-- Your document should contain only "container" and "container-fluid" divs, at the "top" level
+      of your layout.
+      A container (either "container" or "container-fluid") should not be nested within other containers.
+      You usually have 1 container, either "container" or "container-fluid". You only have to switch
+      container (from "container" to "container-fluid" or vice versa) if you want to add (switch to
+      "container") left and right margins on your page layout, or eliminate (switch to "container-fluid")
+      the left and right margins.
+      Please, note that even "container" eliminates its left and right margins on narrow devices, like 
+      mobile phones.
+      
+      Now, each container (of either type) needs to have only "row" divs. And each "row" div needs to have
+      only "col" divs. Then, you put the actual content inside your "col" divs.
+      
+      This is the standard approach (there are exceptions to these rules, but start with following this).
+      
+      You can always wrap standard Bootstrap divs ("container", "container-fluid", "row", "col-*-*") with
+      semantic divs, or add extra semantic div classes, like "footer" class. But this does not affect the
+      above rules and they do not affect the layout (unless you change the CSS properties of the divs in your 
+      custom CSS).
+      
+      Note: Sometimes, if you only want 1 row and 1 column inside your container, you may avoid putting the "row"
+      and "col-*-12" class. This might work better on this particular case for your design because "row" and "col-*-12"
+      add some stuff that you may not want. "row" adds margin-left/right: -15px while "col-*-12" adds padding-left/right: 15px
+      
+      Note: Negative margin on a div, essentially takes room from/occupies part of the padding of the parent div.
+      
+      Having said the above:
+      
+      1. I have removed the div with class jumbotron. 
+      2. img-responsive makes the img have 
+          max-width: 100%
+          and 
+          height: auto
+          
+         This will not be obvious on your carousel images, because the whole carousel is already made responsive with their own
+         classes. It "img-responsive" is useful on other images on your page.
+         
+         Read this:  http://www.w3schools.com/bootstrap/bootstrap_ref_css_images.asp
+         
+      3. You are using "container-fluid" for your carousel. Which is good. And you avoid adding rows/col divs. Again good according
+         what I have said above and because of the fact that you want the images to occupy the whole space.
+         
+      4. You are using "container" for your about section. This is good, because you want to center the content with left and right
+         margins. Makes your life easier.      
+         Your about section has 1 row. This is correct.
+         You divide your about row to 3 columns on medium and large devices.
+         You divide your about row to 1 column on xtra small and small devices.
+         This is correct.
+         However, your About h1 is not in standard position. So, I created its own row/col divs and put that inside.
+         
+      5. Your FAQ section is not very clear/design wise to me.
+         For example the Learn More and My CV button...should be 2 columns layout (I guess)
+         
+         Also, there is not point to start a new container if this is not of different class than
+         the one you had before. So your FAQ can be on the same container like the about.
+         
+         I have organized your content into rows and cols just to follow the standard bootstrap process.
+         If this is not what you want, you can change on specifics and override.
+         
+      6. Then you had your images with the cats. But you didn't have any layout classes for them.  
+         You need to use some bootstrap classes to lay them out on the page. 
+         See how I am using 2 breakpoints there. Extra small devices, one picture per row, Small devices 2 pictures per row, Medium and Large devices all 4 pictures on same row.
+         (visual row I mean)
+         I have also changed the styles.css file. I do not longer change the style of the .image div but the style of .image img. Also, I do not set anything that has
+         to do with the height/width. I leave that to be responsive with % resizes as default.
+         Note also on the javascript that dynamically adds the <img tag...I am using the class img-responsive. If I do not do that the images will not shrink on smaller devices.
+         Note: I am not using the background-image property to attach the image. I am using the javascript to add the img dynamically. I find easier to manage the <img tag, rather
+         than the background-image. However, this is up to your personal taste.
+         Note that If this were a production site, I wouldn't add the images with javascript. I would have added them in the HTML from the beginning.
+         
+      7. Contact
+         I leave that inside the same container. I do no need another container.
+         I also wrap in rows and cols.
+         See how I have divided the row into columns with 3 breakpoints
+            
+      8. The video
+         Inside the same container, on its own row.  
+         See how I have used the classes "embed-responsive" and "embed-responsive-item" to make the iframe scale well from small to large devices.    
+         
+      9. Finally, the modal.
+         I have placed that at the end. It can be anywhere in the document, but since this is not part of the main document it is invisible,
+         I decided to put that at the end. I do not want to disrupt the flow with things that are not visible.
+         The modal becomes visible only when you click the button. And it is styled and positioned on the fly by javascript.
+         This, does not have to follow the bootstrap rules for container e.t.c. You can use any classes you like alongside the standard bootstrap
+         ones for modal dialogs.
+      -->
+      
+      <div class="container-fluid">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li>   -->  
+               </ol>
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                     <img src="img/demonte2.jpg" alt="...">
+                     <div class="carousel-caption1">
+                        <h3>Ouch...</h3>
+                        <p>You've Got a project !</p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="img/lesson8-portfolioheroimage2.jpg" alt="...">
+                     <div class="carousel-caption2">
+                        <h3>Philippe Jedar, Web Developer</h3>
+                        <p>Serving all of your web development needs.</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Controls -->
+               <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                 <span class="sr-only">Previous</span>
+               </a>
+                 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                 <span class="sr-only">Next</span>
+               </a>
+            </div>
+     </div>
+      
+      
+     <div class="container anchor" id="about">
+		 <div class="row">
+		   <div class="col-xs-12">
+		     <h1>About</h1>
+		   </div>
+		 </div>
+                  
+         <div class="row">
+            <div class="col-md-4 col-xs-12">	
+               <h2>Portfolio Concept</h2>
+               <p>Webmaster for:
+                  <a href="http://www.shamarpa.org/" target="_blank"> http://www.shamarpa.org/ </a> <br>
+                  Blogger for:
+                  <a href="http://blog.capital108.com/" target="_blank">  http://blog.capital108.com/ </a> <br>
+                  In the past, I've build quite a number of web sites using Dreamweaver, then Typo3 and finally <a href="#" title="WP more info" id="item1">word press</a>.
+               </p>
+               <p><a class="btn btn-default" id="item2" href="#" title="Coming Soon" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4 col-xs-12">
+               <h2>Project Goals</h2>
+               <p>I can allocate 3 to 5 hours per day, 5 days a week. </p>
+               <p><a class="btn btn-default" id="item3" href="#" title="Coming Soon (bis)" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4 col-xs-12">
+               <h2>Course Goals</h2>
+               <p>"Dedusting" and	 improving my skills in HTML and CSS <br>
+                  Acquiring skills in JS <br>
+                  Becoming a skilled Ruby programmer <br> 
+               </p>
+               <p><a class="btn btn-default" id="item4" href="#" title="Coming Soon (ter)" role="button">View details &raquo;</a></p>
+            </div>
+         </div>
+         <hr>
+
+         <div class="row" id="faq">
+		    <div class="col-md-6 col-xs-12">
+              <h2 class="learn-more">Learn more</h2>
+            </div>  
+            
+            <div class="col-md-6 col-xs-12">
+				<div class="modal-button">
+                   <!-- Small modal button -->
+                   <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">My CV</button>
+                </div>
+            </div>  		    		     
+         </div> <!-- first row for faq -->
+         
+         <div class="row">
+           <!-- will put the services here -->
+           <div class="col-xs-12 the-array">
+             
+            	<table>
+      		    	<tr class="my-row">
+        			<th>Services</th>
+        			<th>Service 1</th>
+        			<th>Service 2</th>
+      			  </tr>
+      			  <tr class="my-row">
+        			<td>Feature 1</td>
+        			<td>Property 1</td>
+        			<td>Property 2</td>
+      			  </tr>
+      			  <tr class="my-row">
+        			<td>Feature 2</td>
+        			<td>Property 1</td>
+        			<td>Property 2</td>
+      			  </tr>
+      			  <tr class="my-row">
+        			<td>Feature 3</td>
+        			<td>Property 1</td>
+        			<td>Property 2</td>
+      			  </tr>
+      			  <tr class="my-row">
+        			<td>Feature 4</td>
+        			<td>Property 1</td>
+        			<td>Property 2</td>
+      			  </tr>
+      			  <tr class="my-row">
+        			<td>Feature 5</td>
+        			<td>Property 1</td>
+        			<td>Property 2</td>
+      			  </tr>
+				</table>
+         
+           </div>
+           
+         </div> <!-- row for array -->         
+ 
+         <div class="row">
+			   
+			 <div class="col-xs-12 panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-default">
+				   <div class="panel-heading" role="tab" id="headingOne">
+					  <h4 class="panel-title">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="glyphicon glyphicon-plus"></span>
+						 Why did you decide to become a web developer?
+						 </a>
+					  </h4>
+				   </div>
+				   <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+						 I have been exploring different technologies, for years, in an empiric manner... I decided finally to get some regular teachings, allowing me to organize my knowledge in a more orderly and efficient way. 
+					  </div>
+				   </div>
+				</div>
+				<div class="panel panel-default">
+				   <div class="panel-heading" role="tab" id="headingTwo">
+					  <h4 class="panel-title">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="glyphicon glyphicon-plus"></span>
+						 What is your design process?  
+						 </a>
+					  </h4>
+				   </div>
+				   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					  <div class="panel-body">
+						 Listening, listening, listening the client. Reformulating the needs and developing the features in an incremental and iterative way.
+					  </div>
+				   </div>
+				</div>
+				<div class="panel panel-default">
+				   <div class="panel-heading" role="tab" id="headingThree">
+					  <h4 class="panel-title">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="glyphicon glyphicon-plus"></span>
+						 Who are your clients?
+						 </a>
+					  </h4>
+				   </div>
+				   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					  <div class="panel-body">
+						 I have been working for non-profit and commercial entities
+					  </div>
+				   </div>
+				</div>
+			 </div> <!-- col-xs-12 + panel-group for accordion -->
+           
+         </div> <!-- row that contains the accordion -->
+         
+         <div class="row">
+           <div class="image col-xs-12 col-sm-6 col-md-3" id="0"> </div>
+           <div class="image col-xs-12 col-sm-6 col-md-3" id="1"> </div>
+           <div class="image col-xs-12 col-sm-6 col-md-3" id="2"> </div>
+           <div class="image col-xs-12 col-sm-6 col-md-3" id="3"> </div>
+         </div>     
+         
+         <div class="row" id="contact">
+           <div class="col-xs-12 header">
+             <h1> Contact</h1>
+           </div>    
+         </div> <!-- row for contact -->          
+         
+         <div class="row">
+             <div class="contact_info col-xs-12 col-sm-6 col-md-4">
+                  <h3> 
+                     <span class="glyphicon glyphicon-paperclip">
+                     Email me !
+                     </span>
+                  </h3>
+                  <p> <a href="mailto:philip.jedar@gmail.com">philip.jedar@gmail.com</a> </p>
+                  <h3>
+                     <span class="glyphicon glyphicon-earphone">
+                     Phone
+                     </span>
+                  </h3>
+                  <p>
+                     06 06 06 06 06
+                  </p>
+             </div> <!-- col for contact info LEFT column-->      
+             
+             <div class="col-xs-12 col-sm-6 col-md-4">
+				 <form>
+					  <div class="form-group">
+						 <input placeholder="Your name" type="text" id="name" >
+					  </div>
+					  <div class="form-group">
+						 <input placeholder="Your email address" type="email" id="email" required="required">
+					  </div>
+					  <div class="form-group">
+						 <textarea placeholder="Your message here" style="resize:none" cols="40" rows="5" id="message" required="required" class="comment-box"></textarea>
+					  </div>
+					  <div class="form-group">
+						 <button type="submit" class="btn btn-success" id="button">Send</button>
+					  </div>
+				   </form>
+				   <p id="visible-comment"></p>
+				   <p id="char-count"></p>
+             </div>  <!-- col for form MIDDLE columm -->
+             
+             <div class="col-xs-12 col-sm-6 col-md-4">
+				 <div id="map-canvas" style="height: 300px; width:300px">
+
+				</div>
+             </div> <!-- col for map RIGHT column -->
+             
+         </div> <!-- row for contact info -->
+                  
+		 <div class="row">
+			 <div class="col-xs-12 col-md-6 col-md-offset-3 embed-responsive embed-responsive-16by9">
+				 <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/Pwrwf_8H25Y" frameborder="0" allowfullscreen></iframe>
+			 </div>			 
+		 </div>             
+         
+         <div class="row">
+			 <div class="xs-col-12">
+               <footer class="foot">
+                 &copy; Philippe Jedar 2015 
+                  <div class="twitt">
+                    <a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false">Follow @twitter</a>
+                  </div>
+                  <div class="fb-share-button" data-href="https://www.facebook.com/Capital108" data-layout="button"></div>
+               </footer> 
+             </div>  
+         </div>
+
+     </div> <!-- container -->
+     
+     <!--  modal -->
+	 <div class="modal fade bs-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-lg" >
+		   <div class="modal-content">
+			  <div class="modal-header">
+				 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				 <h4 class="modal-title" id="myModalLabel">MY Resume</h4>
+			  </div>
+			  <div class="modal-body">
+				 <iframe id="modalframe" src="CV-Philippe-Jedar-2015.pdf"></iframe>
+			  </div>
+		   </div>
+		</div>
+	 </div>
+     
+      <!-- Can place script tags with JavaScript files here -->
+      <script type="text/javascript">
+         var $root = $('html, body');
+           $('.navbar-nav a').click(function() {
+               var href = $.attr(this, 'href');
+               $root.animate({
+                   scrollTop: $(href).offset().top
+               }, 500, function () {
+                   window.location.hash = href;
+               });
+               return false;
+           });
+      </script>
+   </body>
+</html>
